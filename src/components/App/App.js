@@ -18,11 +18,8 @@ function App () {
   const handlePost = (information) => {
     postUrls(information)
       .then((data) => {
-        console.log({data});
         setPostStatus("Success")
-        setUrls((data) => {
-          return [ ...urls, data ]
-        })
+        setUrls([ ...urls, data ])
       })
   }
 
